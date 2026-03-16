@@ -36,15 +36,16 @@ body.sticky-bottom-footer {
 // Page headers (e.g. "selected publications", "news")
 
 .post-title {
-  font-family: 'Roboto Slab', serif;
-  font-weight: 300;
+  font-family: 'Lora', serif;
+  font-weight: 400;
 }
 
 .post h2 {
-  font-family: 'Roboto Slab', serif;
-  font-weight: 300;
-  font-size: 1.3rem;
-  letter-spacing: 0.03em;
+  font-family: 'Lora', serif;
+  font-weight: 400;
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--global-text-color);
   border-bottom: 1px solid var(--global-divider-color);
   padding-bottom: 0.4rem;
   margin-top: 2.5rem;
@@ -82,48 +83,57 @@ body.sticky-bottom-footer {
 }
 
 .pub-entry {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.75rem;
 
   .pub-title {
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 0.15rem;
   }
 
   .pub-authors {
-    color: var(--global-text-color);
-    font-size: 0.9rem;
+    font-size: 0.83rem;
+    color: var(--global-text-color-light);
 
     strong {
       font-weight: 600;
+      color: var(--global-text-color);
     }
 
     a {
-      color: var(--global-text-color);
+      color: var(--global-text-color-light);
       text-decoration: none;
-      border-bottom: 1px dashed var(--global-theme-color);
+      border-bottom: 1px dashed var(--global-text-color-light);
 
       &:hover {
-        border-bottom-style: solid;
+        color: var(--global-theme-color);
+        border-bottom-color: var(--global-theme-color);
       }
     }
   }
 
   .pub-venue {
     color: var(--global-text-color-light);
-    font-size: 0.9rem;
+    font-size: 0.83rem;
+    font-style: italic;
   }
 
   .pub-note {
     color: var(--global-theme-color);
+    font-style: normal;
   }
 
   .pub-links {
-    font-size: 0.85rem;
-    margin-top: 0.2rem;
+    display: inline;
+    font-size: 0.83rem;
+    font-style: normal;
+    margin-left: 0.25rem;
 
     a {
       color: var(--global-theme-color);
       text-decoration: none;
-      margin-right: 0.4rem;
+      margin-right: 0.35rem;
 
       &:hover {
         text-decoration: underline;

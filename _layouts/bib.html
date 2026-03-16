@@ -46,48 +46,47 @@
     {%- endif -%}
     {%- if entry.year -%}, {{entry.year}}{%- endif -%}
     {%- if entry.note %} &mdash; <span class="pub-note">{{ entry.note }}</span>{%- endif -%}
-  </div>
-
-  <div class="pub-links">
-    {%- if entry.abstract -%}
-      <a class="abstract btn-link" role="button">[abstract]</a>
-    {%- endif -%}
-    {%- if entry.arxiv -%}
-      <a href="http://arxiv.org/abs/{{ entry.arxiv }}">[arXiv]</a>
-    {%- endif -%}
-    {%- if entry.pdf -%}
-      {%- if entry.pdf contains '://' -%}
-        <a href="{{ entry.pdf }}">[pdf]</a>
-      {%- else -%}
-        <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}">[pdf]</a>
+    <span class="pub-links">
+      {%- if entry.abstract -%}
+        <a class="abstract btn-link" role="button">[abstract]</a>
       {%- endif -%}
-    {%- endif -%}
-    {%- if entry.html -%}
-      <a href="{{ entry.html }}">[html]</a>
-    {%- endif -%}
-    {%- if entry.code -%}
-      <a href="{{ entry.code }}">[code]</a>
-    {%- endif -%}
-    {%- if entry.poster -%}
-      {%- if entry.poster contains '://' -%}
-        <a href="{{ entry.poster }}">[poster]</a>
-      {%- else -%}
-        <a href="{{ entry.poster | prepend: '/assets/pdf/' | relative_url }}">[poster]</a>
+      {%- if entry.arxiv -%}
+        <a href="http://arxiv.org/abs/{{ entry.arxiv }}">[arXiv]</a>
       {%- endif -%}
-    {%- endif -%}
-    {%- if entry.slides -%}
-      {%- if entry.slides contains '://' -%}
-        <a href="{{ entry.slides }}">[slides]</a>
-      {%- else -%}
-        <a href="{{ entry.slides | prepend: '/assets/pdf/' | relative_url }}">[slides]</a>
+      {%- if entry.pdf -%}
+        {%- if entry.pdf contains '://' -%}
+          <a href="{{ entry.pdf }}">[pdf]</a>
+        {%- else -%}
+          <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}">[pdf]</a>
+        {%- endif -%}
       {%- endif -%}
-    {%- endif -%}
-    {%- if entry.website -%}
-      <a href="{{ entry.website }}">[website]</a>
-    {%- endif -%}
-    {%- if entry.bibtex_show -%}
-      <a class="bibtex btn-link" role="button">[bib]</a>
-    {%- endif -%}
+      {%- if entry.html -%}
+        <a href="{{ entry.html }}">[html]</a>
+      {%- endif -%}
+      {%- if entry.code -%}
+        <a href="{{ entry.code }}">[code]</a>
+      {%- endif -%}
+      {%- if entry.poster -%}
+        {%- if entry.poster contains '://' -%}
+          <a href="{{ entry.poster }}">[poster]</a>
+        {%- else -%}
+          <a href="{{ entry.poster | prepend: '/assets/pdf/' | relative_url }}">[poster]</a>
+        {%- endif -%}
+      {%- endif -%}
+      {%- if entry.slides -%}
+        {%- if entry.slides contains '://' -%}
+          <a href="{{ entry.slides }}">[slides]</a>
+        {%- else -%}
+          <a href="{{ entry.slides | prepend: '/assets/pdf/' | relative_url }}">[slides]</a>
+        {%- endif -%}
+      {%- endif -%}
+      {%- if entry.website -%}
+        <a href="{{ entry.website }}">[website]</a>
+      {%- endif -%}
+      {%- if entry.bibtex_show -%}
+        <a class="bibtex btn-link" role="button">[bib]</a>
+      {%- endif -%}
+    </span>
   </div>
 
   {%- if entry.abstract -%}
