@@ -33,14 +33,136 @@ body.sticky-bottom-footer {
   }
 }
 
-// TODO: redefine content layout.
+// Page headers (e.g. "selected publications", "news")
+
+.post-title {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+}
+
+.post h2 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  font-size: 1.3rem;
+  letter-spacing: 0.03em;
+  border-bottom: 1px solid var(--global-divider-color);
+  padding-bottom: 0.4rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
 
 
 /******************************************************************************
  * Publications
  ******************************************************************************/
 
-// TODO: redefine publications layout.
+// Publications
+
+.publications {
+  margin-top: 2rem;
+
+  h2.bibliography {
+    display: none;
+  }
+
+  ol.bibliography {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+
+    li {
+      margin-bottom: 1.25rem;
+    }
+  }
+}
+
+.pub-entry {
+  margin-bottom: 1.25rem;
+
+  .pub-title {
+    font-weight: 600;
+  }
+
+  .pub-authors {
+    color: var(--global-text-color);
+    font-size: 0.9rem;
+
+    strong {
+      font-weight: 600;
+    }
+
+    a {
+      color: var(--global-text-color);
+      text-decoration: none;
+      border-bottom: 1px dashed var(--global-theme-color);
+
+      &:hover {
+        border-bottom-style: solid;
+      }
+    }
+  }
+
+  .pub-venue {
+    color: var(--global-text-color-light);
+    font-size: 0.9rem;
+  }
+
+  .pub-note {
+    color: var(--global-theme-color);
+  }
+
+  .pub-links {
+    font-size: 0.85rem;
+    margin-top: 0.2rem;
+
+    a {
+      color: var(--global-theme-color);
+      text-decoration: none;
+      margin-right: 0.4rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .hidden {
+    font-size: 0.875rem;
+    max-height: 0px;
+    overflow: hidden;
+    text-align: justify;
+    transition: all 0.15s ease;
+
+    p {
+      line-height: 1.4em;
+      margin: 10px;
+    }
+
+    pre {
+      font-size: 1em;
+      line-height: 1.4em;
+      padding: 10px;
+    }
+  }
+
+  .hidden.open {
+    max-height: 100em;
+    transition: all 0.15s ease;
+  }
+
+  div.abstract.hidden {
+    border: dashed 1px var(--global-bg-color);
+  }
+
+  div.abstract.hidden.open {
+    border-color: var(--global-text-color);
+  }
+}
 
 
 /*****************************************************************************
