@@ -75,23 +75,32 @@ body.sticky-bottom-footer {
     margin-top: 0;
 
     li {
-      margin-bottom: 1.25rem;
+      margin-bottom: 0;
     }
   }
 }
 
 .pub-entry {
   margin-bottom: 1.75rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--global-divider-color);
+
+  &:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
 
   .pub-title {
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.4;
-    margin-bottom: 0.15rem;
+    margin-bottom: 0.25rem;
   }
 
   .pub-authors {
     font-size: 0.83rem;
+    line-height: 1.5;
     color: var(--global-text-color-light);
 
     strong {
@@ -112,9 +121,11 @@ body.sticky-bottom-footer {
   }
 
   .pub-venue {
+    display: block;
     color: var(--global-text-color-light);
     font-size: 0.83rem;
     font-style: italic;
+    margin-top: 0.35rem;
   }
 
   .pub-note {
@@ -123,18 +134,28 @@ body.sticky-bottom-footer {
   }
 
   .pub-links {
-    display: inline;
-    font-size: 0.83rem;
+    display: block;
     font-style: normal;
-    margin-left: 0.25rem;
+    margin-top: 0.5rem;
+    margin-left: 0;
 
     a {
+      display: inline-block;
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
       color: var(--global-theme-color);
       text-decoration: none;
-      margin-right: 0.35rem;
+      border: 1px solid var(--global-theme-color);
+      border-radius: 1rem;
+      padding: 0.15rem 0.65rem;
+      margin: 0 0.35rem 0.35rem 0;
 
       &:hover {
-        text-decoration: underline;
+        color: var(--global-bg-color);
+        background-color: var(--global-theme-color);
+        text-decoration: none;
       }
     }
   }
